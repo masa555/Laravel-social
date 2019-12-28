@@ -29,7 +29,13 @@
             </span>
         @endif
       </div>
-
+      <div class="form-group row mt-2">
+      <div class="col-md-8 offset-md-4">
+           <a href="auth/google" class="btn btn-secondary" role="button">
+            Google Login
+          </a>
+        </div>
+      </div>
       <div class="form-group text-center">
         <input type="submit" name="commit" value="ログインする" class="loginBtn" data-disable-with="ログインする">
       </div>
