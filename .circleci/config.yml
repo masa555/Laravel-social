@@ -15,13 +15,6 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mysql:9.4
 
-    environment:
-      - APP_DEBUG: true
-      - APP_ENV: testing
-      - APP_KEY: base64:2OdBB06gGhggjDFYur72vNYIdMQNwktVlpKQEhmxI/0=
-      - DB_CONNECTION: mysql
-      - MYSQL_ALLOW_EMPTY_PASSWORD: true
-
     working_directory: ~/work
 
     steps:
