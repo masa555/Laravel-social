@@ -54,3 +54,6 @@ Route::get('listing/{listing_id}/card/{card_id}/delete', 'CardsController@destro
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('/');
+
+Route::get('/auth/{service}', 'OAuthLoginController@getGoogleAuth')->where('service', 'google');
+Route::get('/auth/callback/google', 'OAuthLoginController@authGoogleCallback');
