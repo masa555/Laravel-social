@@ -52,8 +52,3 @@ Route::post('/card/edit', 'CardsController@update');
 Route::get('listing/{listing_id}/card/{card_id}/delete', 'CardsController@destroy');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('/');
-
-Route::get('/auth/{service}', 'OAuthLoginController@getGoogleAuth')->where('service', 'google');
-Route::get('/auth/callback/google', 'OAuthLoginController@authGoogleCallback');
