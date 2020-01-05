@@ -30,10 +30,14 @@
         @endif
       </div>
       <div class="form-group row mt-2">
-      <div class="col-md-8 offset-md-4">
-           <a href="{{ url('login/twitter')}}">twitterログイン</a>
-        </div>
+        <a class="btn btn-block  btn-primary"  href="{{ url('login/twitter')}}">
+       <i class="fab fa-twitter fa-lg ">twiiterでログイン</i>
+        </a>
+          @if (session('oauth_error'))
+          {{ session('oauth_error') }}
+          @endif
       </div>
+  
       <div class="form-group text-center">
         <input type="submit" name="commit" value="ログインする" class="loginBtn" data-disable-with="ログインする">
       </div>

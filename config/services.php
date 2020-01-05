@@ -34,8 +34,13 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
     "twitter" => [
-        "client_id" => env("TWITTER_CLIENT_ID"),
-        "client_secret" => env("TWITTER_CLIENT_SECRET"),
-        "redirect" => env("CALLBACK_URL"),
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('TWITTER_CLIENT_CALLBACK')
+    ],
+    "google" => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_CLIENT_CALLBACK')
     ],
 ];

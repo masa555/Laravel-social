@@ -52,5 +52,7 @@ Route::post('/card/edit', 'CardsController@update');
 Route::get('listing/{listing_id}/card/{card_id}/delete', 'CardsController@destroy');
 
 Auth::routes();
-Route::get('/login/{social}', 'Auth\OAuthLoginController@socialLogin')->where('social', 'twitter');
-Route::get('/login/{social}/callback', 'Auth\OAuthLoginController@handleProviderCallback')->where('social', 'twitter');
+
+Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');
+
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
