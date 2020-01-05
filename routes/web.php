@@ -53,6 +53,7 @@ Route::get('listing/{listing_id}/card/{card_id}/delete', 'CardsController@destro
 
 Auth::routes();
 
+
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider');
 
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
