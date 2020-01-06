@@ -56,10 +56,10 @@
         </ul>
       </li>
     </ul>
-    <form method="GET" action="/">
-      <input type="text" name="keyword">
-      <input type="submit" value="検索">
-    </form>
+        <form  method ="GET" action="/" class="form-inline my-2 my-md-0">
+					<input class="form-control mr-sm-2" type="text" name="keyword" placeholder="検索..." aria-label="検索...">
+					<button class="btn btn-dark" type="検索">検索</button>
+				</form>
   </nav>
 </header>
 @endauth
