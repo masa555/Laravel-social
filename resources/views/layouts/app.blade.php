@@ -56,6 +56,10 @@
         </ul>
       </li>
     </ul>
+    <form method="GET" action="/">
+      <input type="text" name="keyword">
+      <input type="submit" value="検索">
+    </form>
   </nav>
 </header>
 @endauth

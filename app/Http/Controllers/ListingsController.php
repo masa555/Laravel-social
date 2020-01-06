@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Listing;
 use Auth;
 use Validator;
+use App\Card;
 
 class ListingsController extends Controller
 {
@@ -13,13 +14,19 @@ class ListingsController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index()
+    public function index(Request $request)
     {
         $listings = Listing::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'asc')
             ->get();
+        if ($request->has('keyword')) {
+            $listings = Listing::where('title', 'like', '%' . $request->get('keyword') . '%')->paginate(10);
+        } else {
+            $listings = Listing::paginate(10);
+        }
         return view('listing/index', ['listings' => $listings]);
     }
+
     public function new()
     {
         return view('listing/new');

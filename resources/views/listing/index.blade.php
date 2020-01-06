@@ -28,11 +28,11 @@
             <a class="addCard_link" href="/listing/{{$listing->id}}/card/new">さらにカードを追加</a>
           </div>
         </div>
-        <!-- カード表示部分 -->
-        <!-- ここまで追加 -->
-
       </div>
      @endforeach
   </div>
+  <div class="d-flex justify-content-center">
+    {{ $listings->appends(['keyword'=>Request::get('keyword')])->links() }}
+</div>
 </div>
 @endsection
